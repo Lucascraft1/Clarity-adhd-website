@@ -290,6 +290,8 @@ nav {
 }
 .p-card.standard { background: rgba(255,255,255,0.04); }
 .p-card.extended { background: rgba(255,255,255,0.04); }
+.p-card.transfer { background: rgba(201,123,90,0.12); border: 1px solid rgba(201,123,90,0.3); }
+.p-card.transfer .p-type { color: var(--terra-light, #EDDDD5); }
 .p-type {
   font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
   margin-bottom: 12px;
@@ -509,9 +511,14 @@ var(--warm-white);padding:0 24px;border-bottom:1px solid var(--border);max-heigh
 </section>
 
 <section class="section-pricing" id="pricing">
-  <div style="text-align:center;max-width:560px;margin:0 auto">
+  <div style="text-align:center;max-width:640px;margin:0 auto">
     <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-light);margin-bottom:12px">Transparent Pricing</div>
     <h2 style="font-family:'Fraunces',serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;color:white;line-height:1.1">Clear pricing.<br>No surprises.</h2>
+    <p style="margin-top:20px;font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;">Two intake pathways — priced for what the visit actually requires.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px;">
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:10px 20px;font-size:13px;color:rgba(255,255,255,0.8);">🔬 <strong>New to ADHD care?</strong> → Full diagnostic bundle: $1,099</div>
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:10px 20px;font-size:13px;color:rgba(255,255,255,0.8);">💊 <strong>Already diagnosed?</strong> → Medication transfer intake: $325</div>
+    </div>
   </div>
   <div class="pricing-cards">
     <div class="p-card main">
@@ -526,6 +533,21 @@ var(--warm-white);padding:0 24px;border-bottom:1px solid var(--border);max-heigh
         <li>Weekly check-in visits</li>
         <li>Maintenance plan</li>
         <li>Secure portal messaging</li>
+      </ul>
+      <a href="https://lucas-craft.clientsecure.me" target="_blank" class="p-btn">Get Started</a>
+    </div>
+    <div class="p-card transfer">
+      <div class="p-type">Transfer Intake</div>
+      <div class="p-name">Medication Transfer &amp; Onboarding</div>
+      <div class="p-price"><sup>$</sup>325</div>
+      <div class="p-unit">one-time visit · established diagnosis</div>
+      <ul class="p-list">
+        <li>Full medication history review</li>
+        <li>PDMP check &amp; controlled substance agreement</li>
+        <li>Brief ADHD symptom check-in</li>
+        <li>Written care plan summary</li>
+        <li>Same-day prescribing (where appropriate)</li>
+        <li>Pharmacy setup included</li>
       </ul>
       <a href="https://lucas-craft.clientsecure.me" target="_blank" class="p-btn">Get Started</a>
     </div>
