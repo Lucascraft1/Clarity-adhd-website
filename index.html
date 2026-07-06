@@ -275,8 +275,8 @@ nav {
   padding: 100px 48px;
 }
 .pricing-cards {
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 20px; max-width: 900px; margin: 60px auto 0;
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 20px; max-width: 1100px; margin: 60px auto 0;
 }
 .p-card {
   border-radius: 20px; padding: 36px;
@@ -341,6 +341,56 @@ footer {
 .hero-left > *:nth-child(3) { animation-delay: 0.25s; }
 .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
 .hero-left > *:nth-child(5) { animation-delay: 0.45s; }
+
+/* MOBILE NAV TOGGLE */
+.nav-toggle {
+  display: none; background: none; border: none; cursor: pointer; padding: 8px;
+  width: 40px; height: 40px; align-items: center; justify-content: center;
+}
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+  content: ''; display: block; width: 22px; height: 2px; background: var(--warm-dark);
+  position: relative; transition: all 0.2s;
+}
+.nav-toggle span::before { position: absolute; top: -7px; }
+.nav-toggle span::after { position: absolute; top: 7px; }
+.nav-toggle.open span { background: transparent; }
+.nav-toggle.open span::before { transform: rotate(45deg); top: 0; }
+.nav-toggle.open span::after { transform: rotate(-45deg); top: 0; }
+
+@media (max-width: 860px) {
+  nav { padding: 16px 20px; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--warm-white); flex-direction: column; align-items: flex-start;
+    gap: 0; padding: 8px 20px 20px; border-bottom: 1px solid var(--border);
+    transform: translateY(-130%); opacity: 0; pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links a { padding: 14px 0; width: 100%; border-bottom: 1px solid var(--border); font-size: 15px; }
+  .nav-links a.nav-cta { border-bottom: none; text-align: center; margin-top: 12px; width: 100%; }
+
+  .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; gap: 40px; min-height: unset; }
+  .hero::before { width: 320px; height: 320px; }
+  .hero-main-card { padding: 28px; }
+  .hero-desc { max-width: 100%; }
+
+  .why-grid { grid-template-columns: 1fr; }
+
+  .section-about { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
+  .about-photo-wrap { max-width: 260px; }
+
+  .pricing-cards { grid-template-columns: 1fr; max-width: 420px; }
+  .section-pricing { padding: 60px 20px; }
+
+  footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(32px, 9vw, 40px); }
+  .nav-logo { font-size: 17px; }
+}
 </style>
 </head>
 <body>
@@ -358,7 +408,20 @@ footer {
     <a href="#blog">Blog</a>
     <a href="https://lucas-craft.clientsecure.me" target="_blank" class="nav-cta" style="color:#ffffff !important;">Book Consultation</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu"><span></span></button>
 </nav>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    this.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.getElementById('navToggle').classList.remove('open');
+    });
+  });
+</script>
 
 <section class="hero">
   <div class="hero-left">
@@ -423,7 +486,7 @@ footer {
       </div>
     </div>
     <div class="floating-badge">
-      <div class="floating-badge-val">$1199</div>
+      <div class="floating-badge-val">$1099</div>
       <div class="floating-badge-label">Full Program</div>
     </div>
   </div>
@@ -501,7 +564,7 @@ footer {
     <div class="p-card main">
       <div class="p-type">Full Program</div>
       <div class="p-name">ADHD Assessment & Optimization</div>
-      <div class="p-price"><sup>$</sup>1199</div>
+      <div class="p-price"><sup>$</sup>1099</div>
       <div class="p-unit">6-week program · 5 visits included</div>
       <ul class="p-list">
         <li>60-min comprehensive evaluation</li>
@@ -516,7 +579,7 @@ footer {
     <div class="p-card standard">
       <div class="p-type">Follow-Up</div>
       <div class="p-name">Maintenance Visit</div>
-      <div class="p-price"><sup>$</sup>225</div>
+      <div class="p-price"><sup>$</sup>175</div>
       <div class="p-unit">per 25-min visit</div>
       <ul class="p-list">
         <li>Med management & refills</li>
@@ -527,12 +590,23 @@ footer {
     <div class="p-card extended">
       <div class="p-type">Extended</div>
       <div class="p-name">Extended Follow-Up</div>
-      <div class="p-price"><sup>$</sup>300</div>
+      <div class="p-price"><sup>$</sup>225</div>
       <div class="p-unit">per 40-min visit</div>
       <ul class="p-list">
         <li>Complex adjustments</li>
         <li>Co-occurring conditions</li>
         <li>40-minute session</li>
+      </ul>
+    </div>
+    <div class="p-card extended">
+      <div class="p-type">Transfer</div>
+      <div class="p-name">Transfer Intake</div>
+      <div class="p-price"><sup>$</sup>325</div>
+      <div class="p-unit">one-time visit</div>
+      <ul class="p-list">
+        <li>Review of existing ADHD care</li>
+        <li>Medication history transfer</li>
+        <li>Updated treatment plan</li>
       </ul>
     </div>
   </div>
