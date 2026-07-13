@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Movement, Mindfulness, and ADHD: What the Evidence Actually Says | Clarity ADHD</title>
 <meta name="description" content="Exercise and meditation don't treat ADHD on their own, but they can be meaningful parts of ADHD care. Here's what the research actually shows.">
-<link rel="canonical" href="https://www.clarityadhdwa.com/blog/movement-mindfulness-adhd.html">
+<link rel="canonical" href="https://www.clarityadhdwa.com/blog/movement-mindfulness-adhd">
 <meta property="og:title" content="Movement, Mindfulness, and ADHD: What the Evidence Actually Says | Clarity ADHD">
 <meta property="og:description" content="Exercise and meditation don't treat ADHD on their own, but they can be meaningful parts of ADHD care. Here's what the research actually shows.">
 <meta property="og:image" content="https://clarityadhdwa.com/og/movement-mindfulness-adhd.png">
-<meta property="og:url" content="https://clarityadhdwa.com/blog/movement-mindfulness-adhd.html">
+<meta property="og:url" content="https://clarityadhdwa.com/blog/movement-mindfulness-adhd">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Movement, Mindfulness, and ADHD: What the Evidence Actually Says | Clarity ADHD">
@@ -32,7 +32,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Clarity ADHD, PLLC",
+    "name": "Clarity ADHD",
     "logo": {
       "@type": "ImageObject",
       "url": "https://clarityadhdwa.com/logo.png"
@@ -40,10 +40,10 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://clarityadhdwa.com/blog/movement-mindfulness-adhd.html"
+    "@id": "https://clarityadhdwa.com/blog/movement-mindfulness-adhd"
   },
   "articleSection": "Lifestyle & Treatment",
-  "url": "https://clarityadhdwa.com/blog/movement-mindfulness-adhd.html"
+  "url": "https://clarityadhdwa.com/blog/movement-mindfulness-adhd"
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,29 +100,79 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
   .post-hero{padding:48px 20px 40px;}
   footer{padding:24px 20px;flex-direction:column;text-align:center;}
 }
+
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:10px;position:relative;z-index:110;align-items:center;justify-content:center;}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:22px;height:2px;background:var(--warm-dark);border-radius:2px;transition:all 0.25s;content:'';}
+.nav-toggle span{position:relative;}
+.nav-toggle span::before{position:absolute;top:-7px;}
+.nav-toggle span::after{position:absolute;top:7px;}
+.nav-toggle.open span{background:transparent;}
+.nav-toggle.open span::before{transform:rotate(45deg);top:0;}
+.nav-toggle.open span::after{transform:rotate(-45deg);top:0;}
+@media(max-width:860px){
+  .nav-toggle{display:flex;}
+  .nav-links{position:fixed;top:0;right:0;left:0;flex-direction:column;background:var(--warm-white);padding:80px 24px 32px;gap:20px;transform:translateY(-105%);opacity:0;pointer-events:none;transition:all 0.3s;box-shadow:0 12px 30px rgba(0,0,0,0.12);z-index:105;}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .nav-links a{display:block !important;font-size:16px;}
+}
+.footer-info{background:var(--warm-dark);padding:36px 24px 8px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-bottom:22px;}
+.footer-nav a{color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;text-decoration:none;}
+.footer-nav a:hover{color:#ffffff;}
+.footer-info p{text-align:center;font-size:12.5px;color:rgba(255,255,255,0.5);max-width:760px;margin:0 auto 14px;line-height:1.6;}
+
+.author-box{display:flex;gap:18px;align-items:flex-start;background:var(--sage-bg);border-radius:14px;padding:24px;margin-top:36px;}
+.author-avatar{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:20px;}
+.author-box h3{font-size:15px;font-weight:700;color:var(--warm-dark);margin:0 0 6px;}
+.author-box p{font-size:13.5px;color:var(--warm-mid);line-height:1.6;margin:0 0 8px;}
+.author-box a{font-size:13px;font-weight:700;color:var(--sage);text-decoration:none;}
+.related-posts{margin-top:36px;}
+.related-posts h3{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.related-posts a{display:block;padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;text-decoration:none;color:var(--warm-dark);font-weight:600;font-size:15px;transition:background 0.2s;}
+.related-posts a:hover{background:var(--sage-bg);}
+.related-posts a span{display:block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:4px;}
+.post-disclaimer{font-size:12.5px;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:18px;margin-top:36px;}
 </style>
 </head>
 <body>
 <nav>
-  <a href="../index.html" class="nav-logo">
-    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><circle cx="50" cy="50" r="50" fill="#314130"/><line x1="49.23" y1="11.93" x2="49.22" y2="22.19" stroke="#7C9C81" stroke-width="3.28" stroke-linecap="round"/><line x1="30.95" y1="16.03" x2="35.96" y2="24.76" stroke="#7C9C81" stroke-width="3.35" stroke-linecap="round"/><line x1="67.55" y1="16.03" x2="62.54" y2="24.76" stroke="#7C9C81" stroke-width="3.35" stroke-linecap="round"/><line x1="25.82" y1="33.01" x2="17.72" y2="26.98" stroke="#7C9C81" stroke-width="3.44" stroke-linecap="round"/><line x1="80.71" y1="26.97" x2="72.95" y2="33.05" stroke="#7C9C81" stroke-width="3.41" stroke-linecap="round"/><circle cx="49.31" cy="49.11" r="21.42" fill="none" stroke="#7C9C81" stroke-width="4.96"/><circle cx="56.85" cy="41.48" r="4.79" fill="#D86F45"/><line x1="66.22" y1="66.21" x2="81.22" y2="81.70" stroke="#7C9C81" stroke-width="6.71" stroke-linecap="round"/></svg>
+  <a href="/" class="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <img src="/logo.png" width="36" height="36" alt="Clarity ADHD logo - Adult ADHD telehealth clinic in Washington State" style="flex-shrink:0;border-radius:50%;">
     Clarity <span>ADHD</span>
   </a>
   <div class="nav-links">
-    <a href="../about.html">About</a>
-    <a href="../blog.html">Blog</a>
-    <a href="https://lucas-craft.clientsecure.me" target="_blank" class="nav-cta">Book Consultation</a>
+    <a href="/how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="/forms">Patient Forms</a>
+    <a href="/contact">Contact</a>
+    <a href="https://lucas-craft.clientsecure.me" target="_blank" class="nav-cta" style="color:#ffffff !important;">Book Consultation</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu"><span></span></button>
 </nav>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    this.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.getElementById('navToggle').classList.remove('open');
+    });
+  });
+</script>
 
 <div class="post-hero">
   <div class="post-category">Lifestyle &amp; Treatment</div>
   <h1 class="post-title">Movement, Mindfulness, and ADHD: What the Evidence Actually Says</h1>
-  <div class="post-meta">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; Clarity ADHD, PLLC &nbsp;&middot;&nbsp; Washington State</div>
+  <div class="post-meta">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; Published June 22, 2026 &nbsp;&middot;&nbsp; Washington State</div>
 </div>
 
 <div class="post-body">
-  <a href="../blog.html" class="back-link">&larr; Back to blog</a>
+  <a href="/blog" class="back-link">&larr; Back to blog</a>
 
   <p>Exercise and meditation do not treat ADHD on their own.</p>
 
@@ -179,15 +229,15 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 
   <p>There is a version of ADHD wellness content that treats lifestyle strategies as proof that someone can manage without medication or professional support. This framing is both clinically inaccurate and quietly harmful.</p>
 
-  <p>Coping strategies are part of a comprehensive treatment approach, not an alternative to one. Movement and mindfulness work best when they are layered onto a foundation that may include <a href="../index.html#pricing">medication</a>, behavioral support, therapy, and individualized clinical guidance.</p>
+  <p>Coping strategies are part of a comprehensive treatment approach, not an alternative to one. Movement and mindfulness work best when they are layered onto a foundation that may include <a href="/pricing">medication</a>, behavioral support, therapy, and individualized clinical guidance.</p>
 
   <p>For adults with ADHD, the question is never "can you white-knuckle this with enough discipline?" The question is "what combination of supports reduces the amount of executive function you have to generate from scratch each day?"</p>
 
   <p>Exercise and mindfulness can be part of that answer. They rarely are the whole answer.</p>
 
   <div class="cta-box">
-    <p>If you're an adult in Washington State looking for a <a href="../index.html#pricing">structured, evidence-based approach to ADHD care</a>, including how lifestyle strategies fit alongside medication, Clarity ADHD was built for exactly that.</p>
-    <a href="https://lucas-craft.clientsecure.me" target="_blank">Get Started</a>
+    <p>Clarity ADHD is a telehealth psychiatry practice in Washington State offering <a href="/how-it-works">adult ADHD evaluation</a> and <a href="/pricing">medication management</a>, including care for co-occurring depression and anxiety. Now accepting new patients.</p>
+    <a href="https://lucas-craft.clientsecure.me" target="_blank">Book a Consultation</a>
   </div>
 
   <div class="references">
@@ -199,12 +249,42 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
   <div class="byline">
     <p>Lucas Craft, PA-C is a psychiatry physician assistant and the founder of Clarity ADHD, a telehealth practice specializing in adult ADHD evaluation and medication management in Washington State.</p>
   </div>
-</div>
 
+  <div class="author-box">
+    <div class="author-avatar">LC</div>
+    <div>
+      <h3>About the author</h3>
+      <p>Lucas Craft, MMS, PA-C is a board-certified physician assistant who has worked exclusively in adult ADHD specialty care for the past three years. Diagnosed with ADHD himself, he founded Clarity ADHD, a telehealth psychiatry practice serving adults across Washington State with comprehensive evaluations, objective QbTest testing, and systematic medication management.</p>
+      <a href="/about">More about Lucas &rarr;</a>
+    </div>
+  </div>
+
+  <div class="related-posts">
+    <h3>Related reading</h3>
+    <a href="/blog/adhd-task-initiation-cant-start"><span>Executive Function</span>"I Know What I Need to Do. I Just Can't Start."</a>
+    <a href="/blog/adhd-driving-safety-risk"><span>Treatment & Risk</span>ADHD Treatment Is Not Only About Focus. Sometimes It Is About Safety.</a>
+  </div>
+  <p class="post-disclaimer">The content on this website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+</div>
+<div class="footer-info">
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="/">Home</a>
+    <a href="/how-it-works">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/conditions">Conditions Treated</a>
+    <a href="/faq">FAQ</a>
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/forms">Patient Forms</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <p>The content on this website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+  <p>Clarity ADHD does not provide crisis or emergency services. If you are experiencing a mental health emergency, call or text <strong style="color:rgba(255,255,255,0.75);">988</strong> (Suicide and Crisis Lifeline) or call <strong style="color:rgba(255,255,255,0.75);">911</strong>. Lucas Craft, MMS, PA-C practices in collaboration with a licensed physician in accordance with Washington State law.</p>
+</div>
 <footer>
   <div class="footer-logo">Clarity <span>ADHD</span></div>
-  <div class="footer-copy">Lucas Craft, MMS, PA-C &middot; clarityadhdwa.com &middot; &copy; 2026</div>
-  <a href="https://lucas-craft.clientsecure.me" target="_blank" class="nav-cta" style="color:#ffffff;">Book Now</a>
+  <div class="footer-copy">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; <a href="tel:+13604537663" style="color:inherit;text-decoration:none;">(360) 453-7663</a> &nbsp;&middot;&nbsp; <a href="mailto:lucas@clarityadhdwa.com" style="color:inherit;text-decoration:none;">lucas@clarityadhdwa.com</a> &nbsp;&middot;&nbsp; &copy; 2026 Clarity ADHD</div>
+  <a href="https://lucas-craft.clientsecure.me" target="_blank" class="nav-cta" style="font-size:13px;color:#ffffff;font-weight:700;">Book Now</a>
 </footer>
 </body>
 </html>
