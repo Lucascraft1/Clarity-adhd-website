@@ -109,6 +109,11 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 .price-card ul li{font-size:14px;color:var(--warm-mid);line-height:1.55;padding-left:20px;position:relative;margin-bottom:8px;}
 .price-card ul li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:800;}
 .price-card .p-btn{display:block;text-align:center;background:var(--terra);color:#fff !important;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;}
+.price-card.featured .p-price,.price-card.featured .p-name{color:#FAF8F5;}
+.price-card.featured .p-type{color:var(--sage-light);}
+.price-card.featured .p-unit{color:rgba(255,255,255,0.7);}
+.price-card.featured ul li{color:rgba(255,255,255,0.85);}
+.price-card.featured ul li::before{color:var(--sage-light);}
 .badge-strip{text-align:center;margin:8px 0 4px;}
 .badge-strip span{display:inline-block;background:var(--terra-light);color:var(--terra);font-size:13.5px;font-weight:700;padding:9px 20px;border-radius:999px;margin:4px;}
 details.faq-item{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:12px;box-shadow:0 1px 8px rgba(0,0,0,0.04);}
@@ -231,7 +236,7 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
 
 </div>
 <div class="footer-info">
-  <nav class="footer-nav" aria-label="Footer">
+  <div class="footer-nav" role="navigation" aria-label="Footer">
     <a href="/">Home</a>
     <a href="/how-it-works">How It Works</a>
     <a href="/pricing">Pricing</a>
@@ -241,7 +246,7 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
     <a href="/blog">Blog</a>
     <a href="/forms">Patient Forms</a>
     <a href="/contact">Contact</a>
-  </nav>
+  </div>
   <p>The content on this website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
   <p>Clarity ADHD does not provide crisis or emergency services. If you are experiencing a mental health emergency, call or text <strong style="color:rgba(255,255,255,0.75);">988</strong> (Suicide and Crisis Lifeline) or call <strong style="color:rgba(255,255,255,0.75);">911</strong>. Lucas Craft, MMS, PA-C practices in collaboration with a licensed physician in accordance with Washington State law.</p>
 </div>
