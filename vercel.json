@@ -1,6 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/blog", "destination": "/blog.html" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
