@@ -46,8 +46,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .nav-links{display:flex;gap:28px;align-items:center;}
 .nav-links a{color:var(--warm-mid);font-size:14px;font-weight:500;text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--warm-dark);}
-.nav-cta{padding:10px 24px;border-radius:999px;background:var(--terra);color:#ffffff!important;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.2s;}
-.nav-cta:hover{background:#b86a49;}
+.nav-cta{padding:9px 20px;border-radius:8px;background:var(--warm-dark);color:#ffffff!important;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.2s;}
+.nav-cta:hover{background:#3F5140;}
 .post-hero{background:var(--warm-dark);padding:64px 24px 56px;text-align:center;}
 .post-category{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage-light);margin-bottom:16px;}
 .post-title{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,52px);font-weight:300;color:#FAF8F5;line-height:1.2;max-width:760px;margin:0 auto 20px;}
@@ -62,10 +62,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .forms-list a:hover{background:var(--sage-bg);}
 .forms-list .doc-icon{flex-shrink:0;width:36px;height:36px;border-radius:8px;background:var(--terra-light);color:var(--terra);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:0.02em;}
 .forms-list .doc-arrow{margin-left:auto;color:var(--muted);font-size:18px;}
-.cta-box{background:var(--terra-light);border-left:4px solid var(--terra);border-radius:0 12px 12px 0;padding:28px 32px;margin:48px 0 0;}
-.cta-box p{font-size:15px;color:var(--warm-dark);margin-bottom:16px;}
-.cta-box a{display:inline-block;background:var(--terra);color:white;padding:12px 28px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;}
-.cta-box a:hover{background:#b86a49;}
+.cta-box{background:var(--sage-bg);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin:48px 0 0;}
+.cta-box p{font-size:15px;line-height:1.7;color:var(--warm-dark);margin-bottom:18px;}
+.cta-box a{display:inline-block;background:var(--warm-dark);color:#ffffff;padding:12px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background 0.2s;}
+.cta-box a:hover{background:#3F5140;}
 footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-family:'Fraunces',serif;font-size:20px;color:#FAF8F5;}
 .footer-logo span{color:var(--sage);}
@@ -118,6 +118,8 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 .price-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column;}
 .price-card.featured{background:var(--warm-dark);border-color:var(--warm-dark);}
 .price-card.featured *{color:#FAF8F5;}
+.featured .p-btn{background:#FAF8F5;color:var(--warm-dark) !important;}
+.featured .p-btn:hover{background:#ffffff;}
 .price-card.featured ul li::before{color:var(--sage-light);}
 .price-card .p-type{font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;}
 .price-card .p-name{font-size:16px;font-weight:700;color:var(--warm-dark);margin-bottom:12px;}
@@ -127,7 +129,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 .price-card ul{list-style:none;margin:0 0 18px;padding:0;flex:1;}
 .price-card ul li{font-size:14px;color:var(--warm-mid);line-height:1.55;padding-left:20px;position:relative;margin-bottom:8px;}
 .price-card ul li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:800;}
-.price-card .p-btn{display:block;text-align:center;background:var(--terra);color:#fff !important;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;}
+.price-card .p-btn{display:block;text-align:center;background:var(--warm-dark);color:#fff !important;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
 .badge-strip{text-align:center;margin:8px 0 4px;}
 .badge-strip span{display:inline-block;background:var(--terra-light);color:var(--terra);font-size:13.5px;font-weight:700;padding:9px 20px;border-radius:999px;margin:4px;}
 details.faq-item{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:12px;box-shadow:0 1px 8px rgba(0,0,0,0.04);}
@@ -240,7 +242,7 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
 <footer>
   <div class="footer-logo">Clarity <span>ADHD</span></div>
   <div class="footer-copy">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; <a href="tel:+13604537663" style="color:inherit;text-decoration:none;">(360) 453-7663</a> &nbsp;&middot;&nbsp; <a href="mailto:lucas@clarityadhdwa.com" style="color:inherit;text-decoration:none;">lucas@clarityadhdwa.com</a> &nbsp;&middot;&nbsp; &copy; 2026 Clarity ADHD</div>
-  <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" class="nav-cta" style="font-size:13px;color:#ffffff;font-weight:700;">Book Now</a>
+  <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" style="font-size:13px;color:#ffffff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:3px;">Book Now</a>
 </footer>
 </body>
 </html>
