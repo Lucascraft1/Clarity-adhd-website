@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/blog</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -123,6 +123,12 @@
   <url>
     <loc>https://www.clarityadhdwa.com/blog/adhd-finding-the-right-medication</loc>
     <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clarityadhdwa.com/blog/adhd-mimics-differential</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
