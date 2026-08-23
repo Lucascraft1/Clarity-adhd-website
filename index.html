@@ -559,10 +559,7 @@ footer {
         </div>
       </div>
     </div>
-    <div class="floating-badge">
-      <div class="floating-badge-val">$1099</div>
-      <div class="floating-badge-label">Full Program</div>
-    </div>
+    
   </div>
 </section>
 
@@ -939,5 +936,40 @@ footer {
   <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" style="font-size:13px;color:#ffffff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:3px;">Book Now</a>
 </footer>
 
+
+<!-- clarity-analytics -->
+<script>
+(function(){
+  function ev(n,p){ if (typeof gtag === "function") gtag("event", n, p || {}); }
+  document.addEventListener("click", function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="clientsecure.me"]') : null;
+    if (!a) return;
+    ev("book_click", {
+      page_path: location.pathname,
+      link_text: (a.textContent || "").trim().slice(0, 60),
+      cta_location: a.className || "inline"
+    });
+  }, true);
+  if ("IntersectionObserver" in window) {
+    var fired = {};
+    function watch(sel, name){
+      var el = document.querySelector(sel);
+      if (!el) return;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(x){
+          if (x.isIntersecting && !fired[name]) {
+            fired[name] = 1;
+            ev(name, { page_path: location.pathname });
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      io.observe(el);
+    }
+    watch("#pricing, .section-pricing", "pricing_viewed");
+    watch(".p-plan", "payment_plan_viewed");
+  }
+})();
+</script>
 </body>
 </html>
