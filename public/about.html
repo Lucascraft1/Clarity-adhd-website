@@ -182,6 +182,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
     <a href="/how-it-works">How It Works</a>
     <a href="/pricing">Pricing</a>
     <a href="/conditions">Conditions</a>
+    <a href="/lost-your-prescriber">Transfer Care</a>
     <a href="/about">About</a>
     <a href="/faq">FAQ</a>
     <a href="/blog">Blog</a>
@@ -223,6 +224,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
       <div class="section-eyebrow">Your Provider</div>
       <div class="about-name">Lucas Craft</div>
       <div class="about-title">MMS, PA-C &middot; Psychiatry Physician Assistant</div>
+      <p class="about-bio"><strong>Lucas has ADHD himself.</strong> He was diagnosed as an adult, and he spent years on the patient side of the same frustrations his patients describe: being misunderstood, dismissed, or handed a one-size-fits-all plan that never quite fit. That is the reason this practice exists and the reason it is built the way it is.</p>
       <p class="about-bio">Lucas earned his Master of Medical Science in Physician Assistant Studies from Midwestern University in Downers Grove, Illinois, and is board certified by the National Commission on Certification of Physician Assistants (NCCPA). For the past 3 years, he has worked exclusively in ADHD specialty care, focusing on adult evaluation, diagnosis, and medication management.</p>
       <p class="about-bio">Lucas founded Clarity ADHD because he believes every patient deserves a systematic, data-driven path to the right treatment. Not a 15-minute appointment and a prescription.</p>
       <div class="about-creds">
@@ -309,13 +311,23 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 (function(){
   function ev(n,p){ if (typeof gtag === "function") gtag("event", n, p || {}); }
   document.addEventListener("click", function(e){
-    var a = e.target && e.target.closest ? e.target.closest('a[href*="clientsecure.me"]') : null;
-    if (!a) return;
-    ev("book_click", {
-      page_path: location.pathname,
-      link_text: (a.textContent || "").trim().slice(0, 60),
-      cta_location: a.className || "inline"
-    });
+    if (!e.target || !e.target.closest) return;
+    var a = e.target.closest('a[href*="clientsecure.me"]');
+    if (a) {
+      ev("book_click", {
+        page_path: location.pathname,
+        link_text: (a.textContent || "").trim().slice(0, 60),
+        cta_location: a.className || "inline"
+      });
+      return;
+    }
+    var c = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+    if (c) {
+      ev("contact_click", {
+        page_path: location.pathname,
+        method: c.getAttribute("href").indexOf("tel:") === 0 ? "phone" : "email"
+      });
+    }
   }, true);
   if ("IntersectionObserver" in window) {
     var fired = {};
