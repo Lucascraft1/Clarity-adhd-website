@@ -80,6 +80,30 @@
         "@type": "Answer",
         "text": "No. Clarity ADHD provides psychiatric evaluation and medication management only. If you are experiencing a mental health emergency, call or text 988 (Suicide and Crisis Lifeline) or call 911. For therapy, we're happy to coordinate care with your existing therapist or provide referrals."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What does ongoing care cost after the program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 5-visit program is $1,099. After that, ongoing care is $175 per visit, typically every one to three months, so most established patients spend about $700 a year. Extended follow-ups are $225 when something more complex comes up. There is no membership fee, no annual retainer, and nothing charged between visits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I have a high-deductible plan. Is cash pay actually more expensive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often it is not. Most high-deductible plans require you to pay the first several thousand dollars of care out of pocket before they contribute anything, so before your deductible is met the real comparison is cash pay versus paying a similar amount and still waiting for an in-network panel to open. HSA and FSA cards are accepted here, and we provide superbills you can submit for possible out-of-network reimbursement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Clarity ADHD right for everyone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and we would rather say so before you pay for an intake. Clarity ADHD is built for adults who need ADHD evaluation and medication management. It is not the right setting if you need therapy as your main treatment, if you are under 18 or outside Washington State, or if you are managing something that needs a fuller team than a solo telehealth practice, such as active substance use disorder, bipolar I disorder, psychosis, or a significant eating disorder. If you are in crisis, call or text 988 rather than booking. See who this practice is and is not for on our how it works page."
+      }
     }
   ]
 }
@@ -99,7 +123,7 @@ body{font-family:'Nunito',sans-serif;background:var(--warm-white);color:var(--wa
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:var(--warm-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
 .nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:400;color:var(--warm-dark);text-decoration:none;display:flex;align-items:center;gap:10px;}
 .nav-logo span{color:var(--sage);}
-.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links{display:flex;gap:20px;align-items:center;}
 .nav-links a{color:var(--warm-mid);font-size:14px;font-weight:500;text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--warm-dark);}
 .nav-cta{padding:9px 20px;border-radius:8px;background:var(--warm-dark);color:#ffffff!important;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.2s;}
@@ -222,6 +246,7 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
     <a href="/how-it-works">How It Works</a>
     <a href="/pricing">Pricing</a>
     <a href="/conditions">Conditions</a>
+    <a href="/lost-your-prescriber">Transfer Care</a>
     <a href="/about">About</a>
     <a href="/faq">FAQ</a>
     <a href="/blog">Blog</a>
@@ -283,6 +308,18 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
       <summary>Do you provide therapy or crisis services?</summary>
       <p>No. Clarity ADHD provides psychiatric evaluation and medication management only. If you are experiencing a mental health emergency, call or text 988 (Suicide and Crisis Lifeline) or call 911. For therapy, we're happy to coordinate care with your existing therapist or provide referrals.</p>
     </details>
+    <details class="faq-item">
+      <summary>What does ongoing care cost after the program?</summary>
+      <p>The 5-visit program is $1,099. After that, ongoing care is $175 per visit, typically every one to three months, so most established patients spend about $700 a year. Extended follow-ups are $225 when something more complex comes up. There is no membership fee, no annual retainer, and nothing charged between visits. See <a href="/pricing">pricing</a> for the full schedule.</p>
+    </details>
+    <details class="faq-item">
+      <summary>I have a high-deductible plan. Is cash pay actually more expensive?</summary>
+      <p>Often it is not. Most high-deductible plans require you to pay the first several thousand dollars of care out of pocket before they contribute anything, so before your deductible is met the real comparison is cash pay versus paying a similar amount and still waiting for an in-network panel to open. HSA and FSA cards are accepted here, and we provide superbills you can submit for possible out-of-network reimbursement.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is Clarity ADHD right for everyone?</summary>
+      <p>No, and we would rather say so before you pay for an intake. Clarity ADHD is built for adults who need ADHD evaluation and medication management. It is not the right setting if you need therapy as your main treatment, if you are under 18 or outside Washington State, or if you are managing something that needs a fuller team than a solo telehealth practice, such as active substance use disorder, bipolar I disorder, psychosis, or a significant eating disorder. If you are in crisis, call or text 988 rather than booking. See <a href="/how-it-works">who this practice is and is not for</a>.</p>
+    </details>
   </div>
 
   <div class="note-box"><p>Don't see your question? <a href="/contact" style="color:var(--sage);font-weight:700;">Contact us</a> and we'll be happy to help before you book.</p></div>
@@ -319,13 +356,23 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
 (function(){
   function ev(n,p){ if (typeof gtag === "function") gtag("event", n, p || {}); }
   document.addEventListener("click", function(e){
-    var a = e.target && e.target.closest ? e.target.closest('a[href*="clientsecure.me"]') : null;
-    if (!a) return;
-    ev("book_click", {
-      page_path: location.pathname,
-      link_text: (a.textContent || "").trim().slice(0, 60),
-      cta_location: a.className || "inline"
-    });
+    if (!e.target || !e.target.closest) return;
+    var a = e.target.closest('a[href*="clientsecure.me"]');
+    if (a) {
+      ev("book_click", {
+        page_path: location.pathname,
+        link_text: (a.textContent || "").trim().slice(0, 60),
+        cta_location: a.className || "inline"
+      });
+      return;
+    }
+    var c = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+    if (c) {
+      ev("contact_click", {
+        page_path: location.pathname,
+        method: c.getAttribute("href").indexOf("tel:") === 0 ? "phone" : "email"
+      });
+    }
   }, true);
   if ("IntersectionObserver" in window) {
     var fired = {};
