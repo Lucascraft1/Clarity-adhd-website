@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.clarityadhdwa.com/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/how-it-works</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/pricing</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -26,19 +26,19 @@
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/faq</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/about</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.clarityadhdwa.com/blog</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -165,6 +165,24 @@
   <url>
     <loc>https://www.clarityadhdwa.com/blog/adhd-and-sleep-adults</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clarityadhdwa.com/blog/adhd-evaluation-cost-washington</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clarityadhdwa.com/blog/moving-to-washington-adhd-medication</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clarityadhdwa.com/blog/who-can-diagnose-adhd-washington</loc>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
