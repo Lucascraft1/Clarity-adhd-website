@@ -61,7 +61,7 @@ body{font-family:'Nunito',sans-serif;background:var(--warm-white);color:var(--wa
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:var(--warm-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
 .nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:400;color:var(--warm-dark);text-decoration:none;display:flex;align-items:center;gap:10px;}
 .nav-logo span{color:var(--sage);}
-.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links{display:flex;gap:20px;align-items:center;}
 .nav-links a{color:var(--warm-mid);font-size:14px;font-weight:500;text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--warm-dark);}
 .nav-cta{padding:9px 20px;border-radius:8px;background:var(--warm-dark);color:#ffffff!important;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.2s;}
@@ -146,6 +146,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
     <a href="/how-it-works">How It Works</a>
     <a href="/pricing">Pricing</a>
     <a href="/conditions">Conditions</a>
+    <a href="/lost-your-prescriber">Transfer Care</a>
     <a href="/about">About</a>
     <a href="/faq">FAQ</a>
     <a href="/blog">Blog</a>
@@ -264,13 +265,23 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 (function(){
   function ev(n,p){ if (typeof gtag === "function") gtag("event", n, p || {}); }
   document.addEventListener("click", function(e){
-    var a = e.target && e.target.closest ? e.target.closest('a[href*="clientsecure.me"]') : null;
-    if (!a) return;
-    ev("book_click", {
-      page_path: location.pathname,
-      link_text: (a.textContent || "").trim().slice(0, 60),
-      cta_location: a.className || "inline"
-    });
+    if (!e.target || !e.target.closest) return;
+    var a = e.target.closest('a[href*="clientsecure.me"]');
+    if (a) {
+      ev("book_click", {
+        page_path: location.pathname,
+        link_text: (a.textContent || "").trim().slice(0, 60),
+        cta_location: a.className || "inline"
+      });
+      return;
+    }
+    var c = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+    if (c) {
+      ev("contact_click", {
+        page_path: location.pathname,
+        method: c.getAttribute("href").indexOf("tel:") === 0 ? "phone" : "email"
+      });
+    }
   }, true);
   if ("IntersectionObserver" in window) {
     var fired = {};
