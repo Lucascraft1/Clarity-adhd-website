@@ -226,8 +226,8 @@ function Process({sRef}){
 // ── WHY CLARITY ──
 function WhyClarity(){
   const items=[
-    [I.brain,"Objective Testing, Not Just Questionnaires","We use the FDA-cleared QBTest to measure attention, impulsivity, and activity objectively — giving you data, not opinions."],
-    [I.pill,"Systematic Medication Optimization","We systematically trial 3 medications to find what actually works best for your brain chemistry."],
+    [I.brain,"Objective Testing, Not Just Questionnaires","QbTest may provide objective information about attention, activity, and impulse control. Results are interpreted with the clinical history."],
+    [I.pill,"Systematic Medication Optimization","We systematically compare up to three medication options. Trials are individualized, not obligatory."],
     [I.clock,"Thorough, Never Rushed","Your initial assessment is 50 minutes. Complex conditions deserve careful, unhurried attention."],
     [I.video,"Telehealth That Actually Works","HIPAA-compliant video visits from anywhere in Washington. No commute, no waiting rooms."],
     [I.dollar,"Transparent Cash-Pay Pricing","One clear price for your assessment program. No insurance headaches, no surprise bills."],
@@ -291,7 +291,7 @@ function Pricing({sRef,bookRef}){
                 <span style={{color:"rgba(255,255,255,.6)",fontSize:13}}>total program</span>
               </div>
               <ul style={{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:9,marginBottom:24}}>
-                {["50-min comprehensive initial assessment","FDA-cleared QBTest + results review","3 medication trials with weekly check-ins","Optimization & maintenance planning","Secure messaging between visits"].map(it=>(
+                {["50-min comprehensive initial assessment","FDA-cleared QBTest + results review","Up to three medication trials, individualized","Optimization & maintenance planning","Secure messaging between visits"].map(it=>(
                   <li key={it} style={{display:"flex",alignItems:"flex-start",gap:9}}>
                     <span style={{color:TL,flexShrink:0,marginTop:2}}><Icon d={I.check} size={15}/></span>
                     <span style={{fontSize:13,color:"rgba(255,255,255,.9)"}}>{it}</span>
@@ -490,7 +490,7 @@ function FAQ({sRef}){
     ["Do you accept insurance?","Clarity ADHD is a cash-pay practice. We provide detailed superbills (receipts with medical codes) that you can submit to your insurance for potential out-of-network reimbursement. Many patients recover 50-80% of their costs this way."],
     ["Can you prescribe stimulants (Adderall, Vyvanse, etc.) via telehealth?","Yes — and we want to be direct about this because many telehealth clinics have stopped prescribing stimulants entirely. Under the DEA and HHS telemedicine flexibilities extended through December 31, 2026, we can prescribe Schedule II stimulant medications via telehealth after a thorough video evaluation. We follow all federal and Washington State prescribing regulations, including mandatory PDMP checks."],
     ["What is the QBTest?","The QBTest is an FDA-cleared, computer-based test that objectively measures three core ADHD symptoms: attention, impulsivity, and motor activity. It takes about 20 minutes and provides data-driven results that complement our clinical assessment."],
-    ["Why do you trial 3 different medications?","ADHD medication response is highly individual. By systematically trying 3 medications, we can compare your response to each and find the one that provides the best symptom control with the fewest side effects."],
+    ["Why up to three medication trials?","Most patients go through three trials rather than a single prescription. That is the usual path, individualized, not obligatory. Comparing options helps find the one with the best symptom control and the fewest side effects."],
     ["I think I have ADHD but I've never been diagnosed. Can you help?","Absolutely. That is exactly what our 5-visit assessment program is designed for. We will conduct a comprehensive evaluation including clinical interview, validated screening tools, and objective testing."],
     ["How long are appointments?","Your initial assessment is 50 minutes. Follow-up visits during the medication optimization phase are 25 minutes each. Maintenance visits are also 25 minutes, with 40-minute extended sessions available for complex needs."],
     ["Do I need to be in Washington State?","Yes, you must be physically located in Washington State during your appointments. We serve patients throughout the entire state — from Seattle to Spokane, Bellingham to Vancouver."],
