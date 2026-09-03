@@ -253,6 +253,44 @@ nav {
 }
 .why-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
+/* FIT / ELIGIBILITY */
+.section-fit {
+  background: var(--warm-white);
+  padding: 40px 48px 20px;
+}
+.fit-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  max-width: 1000px; margin: 0 auto;
+}
+.fit-card {
+  background: var(--sage-bg); border-radius: 20px; padding: 32px;
+  border: 1px solid var(--border);
+}
+.fit-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 20px; font-weight: 400; color: var(--warm-dark);
+  margin-bottom: 16px; line-height: 1.3;
+}
+.fit-card ul { list-style: none; padding: 0; margin: 0; }
+.fit-card li {
+  font-size: 14.5px; color: var(--warm-mid); line-height: 1.7;
+  padding: 6px 0 6px 18px; position: relative;
+}
+.fit-card li::before {
+  content: '';
+  position: absolute; left: 0; top: 14px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--sage);
+}
+.fit-note {
+  max-width: 1000px; margin: 20px auto 0;
+  font-size: 14px; color: var(--muted); line-height: 1.7;
+  text-align: center;
+}
+.fit-note a { color: var(--sage); font-weight: 600; text-decoration: none; }
+.fit-note a:hover { color: var(--warm-dark); }
+.section-fit .section-header { margin-bottom: 36px; }
+
 /* ABOUT */
 .section-about {
   padding: 100px 48px;
@@ -411,7 +449,8 @@ footer {
   .hero-main-card { padding: 28px; }
   .hero-desc { max-width: 100%; }
 
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid, .fit-grid { grid-template-columns: 1fr; }
+  .section-fit { padding: 32px 20px 8px; }
 
   .section-about { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
   .about-photo-wrap { max-width: 260px; }
@@ -505,10 +544,10 @@ footer {
       <span>Serving all of Washington State · Telehealth Only</span>
     </div>
     <h1>ADHD care built<br>around <em>you,</em><br>not a template.</h1>
-    <h2 style="font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.06em;margin:-16px 0 20px;">Adult ADHD Telehealth Psychiatry in Washington State</h2>
-    <p class="hero-desc">A structured, data-driven 5-visit program, about 7 weeks start to finish that finds what actually works for your brain. Not just the first medication on the list.</p>
+    <h2 style="font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.06em;margin:-16px 0 20px;">Adult ADHD evaluation and medication management across Washington</h2>
+    <p class="hero-desc">Thoughtful 60-minute evaluations, objective testing when it helps, and systematic medication management with the same provider at every visit. Cash-pay telehealth for adults 18 and older. No insurance billing.</p>
     <div class="hero-actions">
-      <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" class="btn-terra">Get Started →</a>
+      <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" class="btn-terra">Book a free 15-minute consult</a>
       <a href="/how-it-works" class="btn-outline">See How It Works</a>
     </div>
     <p style="font-size:14px;color:var(--muted);margin-top:16px;">New to Clarity? <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" style="color:var(--sage);font-weight:700;text-decoration:none;">Book a free 15-minute consultation</a> to see if we are the right fit.</p>
@@ -551,7 +590,7 @@ footer {
           <div class="timeline-week">Weeks 3 to 4</div>
           <div class="timeline-content">
             <div class="timeline-title">Medications #2 & #3</div>
-            <div class="timeline-desc">Systematic comparison across three options.</div>
+            <div class="timeline-desc">Systematic comparison of up to three options.</div>
           </div>
         </div>
         <div class="timeline-item">
@@ -567,6 +606,38 @@ footer {
   </div>
 </section>
 
+<section class="section-fit" id="is-this-a-fit">
+  <div class="section-header">
+    <div class="section-eyebrow">Honest fit</div>
+    <h2 class="section-h2">Is this the right setting for you?</h2>
+  </div>
+  <div class="fit-grid">
+    <div class="fit-card">
+      <h3>Good fit if you</h3>
+      <ul>
+        <li>Are 18 or older</li>
+        <li>Are in Washington at the time of the visit</li>
+        <li>Suspect ADHD or already have a diagnosis</li>
+        <li>Want medication evaluation or optimization</li>
+        <li>Prefer a structured, data-informed process</li>
+        <li>Want continuity with one provider</li>
+      </ul>
+    </div>
+    <div class="fit-card">
+      <h3>May not be the right setting if you need</h3>
+      <ul>
+        <li>Emergency or crisis services (988/911)</li>
+        <li>Management of severe or unstable psychiatric illness that needs a fuller team than a solo telehealth practice (active substance use disorder, bipolar I, psychosis, significant eating disorder)</li>
+        <li>Substance-use detoxification</li>
+        <li>Disability, forensic, or court-ordered evaluations</li>
+        <li>Pediatric ADHD care</li>
+        <li>Therapy as the main treatment</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fit-note">None of this is a judgment about you. It is about whether this setting can give you good care. For the longer version of who this is not for, see <a href="/how-it-works">How It Works</a>.</p>
+</section>
+
 <section class="section-why" id="how-it-works">
   <div class="section-header">
     <div class="section-eyebrow">Why Clarity ADHD</div>
@@ -576,12 +647,12 @@ footer {
     <div class="why-card">
       <div class="why-icon" aria-hidden="true">🧪</div>
       <div class="why-title">Objective Testing</div>
-      <div class="why-desc">FDA-cleared QbTest measures attention, impulsivity, and activity objectively. Data guides your treatment, not guesswork.</div>
+      <div class="why-desc">QbTest may provide objective information about attention, activity, and impulse control. Results are interpreted with the clinical history, questionnaires, functioning, and other possible causes of symptoms.</div>
     </div>
     <div class="why-card">
       <div class="why-icon" aria-hidden="true">💊</div>
-      <div class="why-title">Systematic Medication Trials</div>
-      <div class="why-desc">Three medication trials, systematically compared. We find what works for your brain, not what worked for someone else.</div>
+      <div class="why-title">Structured Medication Optimization</div>
+      <div class="why-desc">Structured medication optimization. When medication is appropriate, we adjust it using response, functioning, tolerability, and your goals. Up to three comparative trials are common. They are individualized, not obligatory.</div>
     </div>
     <div class="why-card">
       <div class="why-icon" aria-hidden="true">⏱</div>
@@ -608,17 +679,17 @@ footer {
 
 <section class="section-about" id="about">
   <div class="about-photo-wrap">
-    <div class="about-photo" style="background:none;overflow:hidden;border-radius:24px;"><img src="/headshot.jpg" alt="Lucas Craft, PA-C, ADHD Specialist in Washington" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+    <div class="about-photo" style="background:none;overflow:hidden;border-radius:24px;"><img src="/headshot.jpg" alt="Lucas Craft, PA-C, physician assistant focused on adult ADHD care in Washington" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
     <div class="about-stat-pill">
       <div class="about-stat-num">3+</div>
-      <div class="about-stat-label">Years ADHD<br>Specialization</div>
+      <div class="about-stat-label">Years focused on<br>adult ADHD care</div>
     </div>
   </div>
   <div class="about-content">
     <div class="section-eyebrow" style="text-align:left;margin-bottom:12px">Your Provider</div>
     <div class="about-name">Lucas Craft</div>
     <div class="about-title">MMS, PA-C · Psychiatry Physician Assistant</div>
-    <p class="about-bio">Lucas's interest in ADHD started before his career did. Diagnosed with ADHD himself, he spent years navigating the same frustrations his patients describe: being misunderstood, dismissed, or treated with a one-size-fits-all approach that never quite fit. Watching the difference an accurate diagnosis and thoughtful treatment made, for himself and for the patients he's since worked with, is what drove him to specialize in adult ADHD care.</p>
+    <p class="about-bio">Lucas's interest in ADHD started before his career did. Diagnosed with ADHD himself, he spent years navigating the same frustrations his patients describe: being misunderstood, dismissed, or treated with a one-size-fits-all approach that never quite fit. Watching the difference an accurate diagnosis and thoughtful treatment made, for himself and for the patients he's since worked with, is what drove him to focus his practice on adult ADHD care.</p>
     <p class="about-bio">Lucas earned his Master of Medical Science in Physician Assistant Studies from Midwestern University in Downers Grove, Illinois, and is board certified by the National Commission on Certification of Physician Assistants (NCCPA). For the past 3 years, he has worked exclusively in ADHD specialty care, focusing on adult evaluation, diagnosis, and medication management.</p>
     <p class="about-bio">Lucas founded Clarity ADHD because he believes every patient deserves a systematic, data-driven path to the right treatment. Not a 15-minute appointment and a prescription.</p>
     <div class="about-creds">
@@ -626,7 +697,7 @@ footer {
       <span class="cred-chip">Board Certified</span>
       <span class="cred-chip">WA Licensed</span>
       <span class="cred-chip">DEA Registered</span>
-      <span class="cred-chip">ADHD Specialized</span>
+      <span class="cred-chip">Adult ADHD-focused</span>
     </div>
     <p style="font-size:13px;color:var(--muted);margin-top:14px;">WA License #PA 61443443 &middot; <a href="https://wahelms.my.site.com/s/license-search" target="_blank" rel="noopener" style="color:var(--sage);font-weight:600;">Verify with the Washington State Department of Health</a></p>
     <p style="margin-top:16px;"><a href="/about" style="color:var(--sage);font-weight:600;font-size:14px;text-decoration:none;">Read more about Lucas&rsquo;s training and approach to care &rarr;</a></p>
@@ -655,7 +726,7 @@ footer {
         <li>FDA-cleared QbTest <span class="p-tag">($200)</span></li>
         <li>QbTest review &amp; diagnosis <span class="p-tag">($225)</span></li>
         <li>Three follow-up visits <span class="p-tag">($525)</span></li>
-        <li>3 systematic medication trials</li>
+        <li>Structured medication optimization (up to three trials, individualized)</li>
         <li>Maintenance plan &amp; secure portal messaging</li>
       </ul>
       <a href="https://lucas-craft.clientsecure.me" target="_blank" class="p-btn">Get Started</a>
@@ -1014,7 +1085,7 @@ footer {
 </section>
 
 <section style="background:var(--warm-white);padding:56px 24px;">
-  <p style="max-width:720px;margin:0 auto;text-align:center;font-size:15.5px;line-height:1.8;color:var(--warm-mid);">Clarity ADHD provides specialized telehealth psychiatric care for adults across Washington State, including Seattle, Spokane, Tacoma, and Bellevue. As a board-certified Physician Assistant, Lucas Craft focuses on comprehensive ADHD evaluations, objective QbTest analysis, and personalized medication management, including treatment of <a href="/conditions" style="color:var(--sage);font-weight:600;">co-occurring depression and anxiety</a>.</p>
+  <p style="max-width:720px;margin:0 auto;text-align:center;font-size:15.5px;line-height:1.8;color:var(--warm-mid);">Clarity ADHD provides telehealth evaluation and medication management for adults with ADHD across Washington State, including Seattle, Spokane, Tacoma, and Bellevue. As a board-certified Physician Assistant, Lucas Craft focuses on comprehensive ADHD evaluations, objective QbTest analysis, and personalized medication management, including treatment of <a href="/conditions" style="color:var(--sage);font-weight:600;">co-occurring depression and anxiety</a>.</p>
 </section>
 
 <div class="footer-info">
