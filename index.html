@@ -47,16 +47,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --sage: #7B9E87;
+  --sage: #597A64;
   --sage-light: #B8CFC0;
   --sage-bg: #EEF4F0;
-  --terra: #C97B5A;
+  --terra: #AE5C39;
   --terra-light: #EDDDD5;
   --warm-white: #FAF8F5;
   --warm-dark: #2D3A2E;
   --warm-mid: #5A6B5B;
   --text: #2D3A2E;
-  --muted: #7A8A7B;
+  --muted: #687669;
   --border: #D8E4DA;
 }
 
@@ -163,6 +163,7 @@ nav {
   background: var(--sage-bg); display: flex; align-items: center; justify-content: center;
   font-size: 14px;
 }
+.why-icon svg, .trust-badge-icon svg { width: 22px; height: 22px; display: block; }
 
 .hero-right { position: relative; z-index: 1; }
 .hero-main-card {
@@ -252,6 +253,34 @@ nav {
   margin-bottom: 10px;
 }
 .why-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+.section-why .section-header { text-align: left; display: flex; align-items: flex-end; gap: 48px; }
+.section-why .section-header > div:first-child { flex: 0 0 620px; }
+.section-why .section-lede { margin: 0 0 8px; font-size: 15px; line-height: 1.68; color: var(--warm-mid); }
+.why-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 26px; }
+.why-badge { font-size: 9.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  padding: 5px 9px; border-radius: 999px; white-space: nowrap; }
+.why-badge-feature { color: #3F5A47; background: #DCE8DF; }
+.why-badge-scope { color: #5F6B60; background: #ECE7DE; }
+.why-card-feature { border: 1.5px solid var(--sage); }
+@media (max-width: 860px) {
+  .section-why .section-header { display: block; }
+  .section-why .section-lede { margin-top: 16px; }
+}
+.hero-doors { display: flex; gap: 16px; margin-top: 28px; }
+.hero-door { flex: 1 1 0; box-sizing: border-box; padding: 22px 22px 20px; border-radius: 14px;
+  background: #FFFFFF; border: 1px solid var(--border); display: flex; flex-direction: column; }
+.hero-door-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.3px;
+  text-transform: uppercase; color: var(--sage); }
+.hero-door-title { margin-top: 9px; font-family: Fraunces, serif; font-size: 21px;
+  line-height: 1.25; color: var(--warm-dark); }
+.hero-door-body { margin-top: 8px; font-size: 14px; line-height: 1.62;
+  color: var(--warm-mid); flex-grow: 1; }
+.hero-door-body strong { font-weight: 700; color: var(--warm-dark); }
+.hero-door .btn { margin-top: 16px; text-align: center; padding: 13px 18px; border-radius: 8px;
+  font-size: 14px; font-weight: 700; text-decoration: none; display: block; }
+.hero-door .btn-fill { background: var(--terra); color: #FFFFFF; }
+.hero-door .btn-line { background: transparent; border: 1.5px solid var(--terra); color: var(--terra); }
+@media (max-width: 720px) { .hero-doors { flex-direction: column; } }
 
 /* FIT / ELIGIBILITY */
 .section-fit {
@@ -546,23 +575,31 @@ footer {
     <h1>ADHD care built<br>around <em>you,</em><br>not a template.</h1>
     <h2 style="font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.06em;margin:-16px 0 20px;">Adult ADHD evaluation and medication management across Washington</h2>
     <p class="hero-desc">Thoughtful 60-minute evaluations, objective testing when it helps, and systematic medication management with the same provider at every visit. Cash-pay telehealth for adults 18 and older. No insurance billing.</p>
-    <div class="hero-actions">
-      <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" class="btn-terra">Book a free 15-minute consult</a>
-      <a href="/how-it-works" class="btn-outline">See How It Works</a>
+    <div class="hero-doors">
+      <div class="hero-door">
+        <div class="hero-door-eyebrow">Start from the beginning</div>
+        <div class="hero-door-title">I think I have ADHD</div>
+        <div class="hero-door-body">Five visits over about seven weeks, ending with a medication that fits. <strong>$1,099</strong>, or 3 or 4 monthly payments.</div>
+        <a class="btn btn-fill" href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener">Book a free 15-minute consult</a>
+      </div>
+      <div class="hero-door">
+        <div class="hero-door-eyebrow">Already diagnosed</div>
+        <div class="hero-door-title">I need to transfer care</div>
+        <div class="hero-door-body">One visit, not the full 5-visit program. History and diagnosis review, records and prescription monitoring check, then a plan going forward. <strong>$325</strong>.</div>
+        <a class="btn btn-line" href="/lost-your-prescriber">Transfer your care</a>
+      </div>
     </div>
-    <p style="font-size:14px;color:var(--muted);margin-top:16px;">New to Clarity? <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener" style="color:var(--sage);font-weight:700;text-decoration:none;">Book a free 15-minute consultation</a> to see if we are the right fit.</p>
-    <p style="font-size:14px;color:var(--muted);margin-top:8px;">Already diagnosed and need to transfer your care? <a href="/lost-your-prescriber" style="color:var(--sage);font-weight:700;text-decoration:none;">Start here</a>.</p>
     <div class="trust-row">
       <div class="trust-badge">
-        <div class="trust-badge-icon" aria-hidden="true">🔒</div>
+        <div class="trust-badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"></rect><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path></svg></div>
         HIPAA Compliant
       </div>
       <div class="trust-badge">
-        <div class="trust-badge-icon" aria-hidden="true">📹</div>
+        <div class="trust-badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.2" width="12.6" height="11.6" rx="2.2"></rect><path d="M15.6 11.2L21 8.2v7.6l-5.4-3z"></path></svg></div>
         100% Telehealth
       </div>
       <div class="trust-badge">
-        <div class="trust-badge-icon" aria-hidden="true">⚕️</div>
+        <div class="trust-badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3.4v5c0 4.6-3.1 8.4-7.5 9.6-4.4-1.2-7.5-5-7.5-9.6v-5z"></path><path d="M9.3 12.2l1.9 1.9 3.6-3.9"></path></svg></div>
         Board-Certified PA
       </div>
     </div>
@@ -640,37 +677,54 @@ footer {
 
 <section class="section-why" id="how-it-works">
   <div class="section-header">
-    <div class="section-eyebrow">Why Clarity ADHD</div>
-    <h2 class="section-h2">Evidence-Based ADHD Care for Adults in Washington State</h2>
+    <div>
+      <div class="section-eyebrow">Why Clarity ADHD</div>
+      <h2 class="section-h2">Evidence-based ADHD care<br>for Washington adults</h2>
+    </div>
+    <p class="section-lede">What care here looks like, whether you arrive for a diagnosis or arrive with one already.</p>
   </div>
   <div class="why-grid">
+    <div class="why-card why-card-feature">
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h3.5l2-5 3 10 2-5H19"></path></svg></div>
+        <span class="why-badge why-badge-feature">With or without a diagnosis</span>
+      </div>
+      <div class="why-title">Structured Medication Optimization</div>
+      <div class="why-desc">When medication is appropriate, we adjust it using response, functioning, tolerability, and your goals. Up to three comparative trials are common. They are individualized, not obligatory.</div>
+    </div>
     <div class="why-card">
-      <div class="why-icon" aria-hidden="true">🧪</div>
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5h16"></path><path d="M6.5 19.5V12"></path><path d="M11.2 19.5V7.5"></path><path d="M15.9 19.5V14.5"></path><path d="M20 19.5V4.5"></path></svg></div>
+        <span class="why-badge why-badge-scope">Part of the evaluation program</span>
+      </div>
       <div class="why-title">Objective Testing</div>
       <div class="why-desc">QbCheck may provide objective information about attention, activity, and impulse control. Results are interpreted with the clinical history, questionnaires, functioning, and other possible causes of symptoms.</div>
     </div>
     <div class="why-card">
-      <div class="why-icon" aria-hidden="true">💊</div>
-      <div class="why-title">Structured Medication Optimization</div>
-      <div class="why-desc">Structured medication optimization. When medication is appropriate, we adjust it using response, functioning, tolerability, and your goals. Up to three comparative trials are common. They are individualized, not obligatory.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon" aria-hidden="true">⏱</div>
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12.5" r="8"></circle><path d="M12 8.3v4.2l2.8 1.7"></path><path d="M9.3 2.8h5.4"></path></svg></div>
+      </div>
       <div class="why-title">Never Rushed</div>
       <div class="why-desc">60-minute initial evaluation. Complex conditions deserve careful, unhurried attention from someone who actually knows you.</div>
     </div>
     <div class="why-card">
-      <div class="why-icon" aria-hidden="true">🧑‍⚕️</div>
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5.5 20c0-3.3 2.9-5.8 6.5-5.8s6.5 2.5 6.5 5.8"></path></svg></div>
+      </div>
       <div class="why-title">Same Provider Always</div>
       <div class="why-desc">You see the same PA at every visit. No rotating providers, no starting over, no losing your history.</div>
     </div>
     <div class="why-card">
-      <div class="why-icon" aria-hidden="true">💳</div>
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="6" width="17.6" height="12" rx="2.2"></rect><path d="M3.2 10.2h17.6"></path><path d="M7 14.2h3.4"></path></svg></div>
+      </div>
       <div class="why-title">Transparent Pricing</div>
       <div class="why-desc">One flat fee for the full program. No insurance battles, no surprise bills, no prior authorizations.</div>
     </div>
     <div class="why-card">
-      <div class="why-icon" aria-hidden="true">📱</div>
+      <div class="why-head">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#3F5A47" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.2" width="12.6" height="11.6" rx="2.2"></rect><path d="M15.6 11.2L21 8.2v7.6l-5.4-3z"></path></svg></div>
+      </div>
       <div class="why-title">100% Telehealth</div>
       <div class="why-desc">Secure video from anywhere in Washington. Evenings and weekends available. No commute, no waiting room.</div>
     </div>
@@ -707,7 +761,7 @@ footer {
 <section class="section-pricing" id="pricing">
   <div style="text-align:center;max-width:620px;margin:0 auto">
     <div style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--sage-light);margin-bottom:12px">Transparent Pricing</div>
-    <h2 style="font-family:'Fraunces',serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;color:white;line-height:1.1">Clear pricing.<br>No surprises.</h2>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(32px,3.5vw,48px);font-weight:300;color:white;line-height:1.1">Clear pricing. <br>No surprises.</h2>
     <p style="font-size:15.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:16px">Most patients choose the complete program. Individual visits are available if you'd rather pay as you go.</p>
   </div>
 
