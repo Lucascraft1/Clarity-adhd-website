@@ -129,6 +129,16 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 .footer-logo{font-family:'Fraunces',serif;font-size:20px;color:#FAF8F5;}
 .footer-logo span{color:var(--sage);}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.45);}
+
+.about-intro-video{margin:0 auto 64px;max-width:420px;text-align:center;}
+.about-intro-video .section-eyebrow{margin-bottom:10px;}
+.about-intro-video h2{font-family:'Fraunces',serif;font-size:26px;font-weight:400;color:var(--warm-dark);margin-bottom:18px;line-height:1.3;}
+.about-intro-video video{width:100%;max-width:380px;max-height:640px;height:auto;border-radius:18px;background:var(--warm-dark);display:block;margin:0 auto;box-shadow:0 10px 36px rgba(45,58,46,0.14);border:1px solid var(--border);}
+.about-intro-video .intro-video-note{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5;}
+@media(max-width:760px){
+  .about-intro-video{max-width:100%;margin-bottom:48px;}
+  .about-intro-video video{max-width:100%;max-height:none;}
+}
 @media(max-width:760px){
   .about-grid{grid-template-columns:1fr;gap:40px;}
   .about-photo-wrap{max-width:260px;}
@@ -236,6 +246,22 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
       </div>
       <p style="font-size:13px;color:var(--muted);margin-top:14px;">WA License #PA 61443443 &middot; <a href="https://wahelms.my.site.com/s/license-search" target="_blank" rel="noopener" style="color:var(--sage);font-weight:600;">Verify with the Washington State Department of Health</a></p>
     </div>
+  </div>
+
+  <div class="about-intro-video">
+    <div class="section-eyebrow">Introduction</div>
+    <h2>Meet Lucas</h2>
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster="/media/lucas-intro-poster.jpg"
+      aria-label="Meet Lucas Craft. A short welcome video from your provider."
+    >
+      <source src="/media/lucas-intro.mp4" type="video/mp4">
+      Your browser does not support embedded video. You can still download the intro from your provider page media folder.
+    </video>
+    <p class="intro-video-note">A short welcome from Lucas. Press play when you are ready.</p>
   </div>
 
   <div class="about-section">
