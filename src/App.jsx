@@ -183,7 +183,7 @@ function TrustBar(){
 // ── PROCESS ──
 function Process({sRef}){
   const steps=[
-    {week:"Week 1",title:"Comprehensive Assessment",desc:"50-minute deep-dive evaluation covering your history, symptoms, and goals. We listen, really listen.",icon:I.clipboard,detail:"Includes validated screening tools (ASRS-5, DIVA-5) and clinical interview"},
+    {week:"Week 1",title:"Comprehensive Assessment",desc:"60-minute deep-dive evaluation covering your history, symptoms, and goals. We listen, really listen.",icon:I.clipboard,detail:"Includes validated screening tools (ASRS-5, DIVA-5) and clinical interview"},
     {week:"Week 2",title:"QbCheck Results & Start Medication #1",desc:"Review your FDA-cleared QbCheck results together, discuss what the data shows, and start your first medication trial.",icon:I.brain,detail:"QbCheck objectively measures attention, impulsivity, and activity, giving us data to guide treatment"},
     {week:"Week 3",title:"Check-In & Medication #2",desc:"Review how you responded to the first medication. We assess effectiveness and side effects, then start a second option.",icon:I.pill,detail:"Systematic tracking of response, side effects, and daily functioning for each trial"},
     {week:"Week 4",title:"Check-In & Medication #3",desc:"Evaluate the second trial and start a third medication. Comparing three options gives us the best chance of finding your ideal fit.",icon:I.activity,detail:"Three trials means we're not guessing, we're finding what truly works for your brain"},
@@ -228,7 +228,7 @@ function WhyClarity(){
   const items=[
     [I.brain,"Objective Testing, Not Just Questionnaires","We use the FDA-cleared QbCheck to measure attention, impulsivity, and activity objectively, giving you data, not opinions."],
     [I.pill,"Systematic Medication Optimization","We systematically trial 3 medications to find what actually works best for your brain chemistry."],
-    [I.clock,"Thorough, Never Rushed","Your initial assessment is 50 minutes. Complex conditions deserve careful, unhurried attention."],
+    [I.clock,"Thorough, Never Rushed","Your initial assessment is 60 minutes. Complex conditions deserve careful, unhurried attention."],
     [I.video,"Telehealth That Actually Works","HIPAA-compliant video visits from anywhere in Washington. No commute, no waiting rooms."],
     [I.dollar,"Transparent Cash-Pay Pricing","One clear price for your assessment program. No insurance headaches, no surprise bills."],
     [I.heart,"Continuity of Care","You see the same provider every visit. No rotating residents, no starting over."],
@@ -291,7 +291,7 @@ function Pricing({sRef,bookRef}){
                 <span style={{color:"rgba(255,255,255,.6)",fontSize:13}}>total program</span>
               </div>
               <ul style={{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:9,marginBottom:24}}>
-                {["50-min comprehensive initial assessment","FDA-cleared QbCheck + results review","3 medication trials with weekly check-ins","Optimization & maintenance planning","Secure messaging between visits"].map(it=>(
+                {["60-min comprehensive initial assessment","FDA-cleared QbCheck + results review","3 medication trials with weekly check-ins","Optimization & maintenance planning","Secure messaging between visits"].map(it=>(
                   <li key={it} style={{display:"flex",alignItems:"flex-start",gap:9}}>
                     <span style={{color:TL,flexShrink:0,marginTop:2}}><Icon d={I.check} size={15}/></span>
                     <span style={{fontSize:13,color:"rgba(255,255,255,.9)"}}>{it}</span>
@@ -397,7 +397,7 @@ function WhySoloPA(){
     {them:"Provider Roulette",themD:"Platforms like Done, Klarity, and LifeStance have high provider turnover. You build a relationship, then your clinician leaves.",us:"Same Provider, Every Visit",usD:"You see the same PA every single appointment, guaranteed. Your history and progress are never lost."},
     {them:"Subscription Billing & Auto-Charges",themD:"Many platforms auto-charge monthly fees, bill for services you didn't receive, and are nearly impossible to reach.",us:"Flat-Fee Transparency",usD:"One clear price. No monthly subscriptions. No auto-charges. No surprise bills. Ever."},
     {them:'"No Stimulants" Policies',themD:'After DEA scrutiny, major platforms like Cerebral stopped prescribing stimulants. Patients are left without first-line treatment.',us:"Comprehensive Medication Management",usD:"We prescribe the full range of ADHD medications, including stimulants, under current DEA telehealth guidelines."},
-    {them:"Fast but Low-Quality",themD:"15-minute appointments, rushed evaluations, and one-size-fits-all prescriptions are the norm at high-volume platforms.",us:"Speed With Depth",usD:"Seen within days, not weeks, but with a 50-minute initial evaluation and a 5-visit systematic optimization process."},
+    {them:"Fast but Low-Quality",themD:"15-minute appointments, rushed evaluations, and one-size-fits-all prescriptions are the norm at high-volume platforms.",us:"Speed With Depth",usD:"Seen within days, not weeks, but with a 60-minute initial evaluation and a 5-visit systematic optimization process."},
   ];
   return(
     <section style={{padding:"80px 20px",background:"#fff",fontFamily:F}}>
@@ -492,7 +492,7 @@ function FAQ({sRef}){
     ["What is the QbCheck?","The QbCheck is an FDA-cleared, computer-based test that objectively measures three core ADHD symptoms: attention, impulsivity, and motor activity. It takes about 20 minutes and provides data-driven results that complement our clinical assessment."],
     ["Why do you trial 3 different medications?","ADHD medication response is highly individual. By systematically trying 3 medications, we can compare your response to each and find the one that provides the best symptom control with the fewest side effects."],
     ["I think I have ADHD but I've never been diagnosed. Can you help?","Absolutely. That is exactly what our 5-visit assessment program is designed for. We will conduct a comprehensive evaluation including clinical interview, validated screening tools, and objective testing."],
-    ["How long are appointments?","Your initial assessment is 50 minutes. Follow-up visits during the medication optimization phase are 30 minutes each. Maintenance visits are 30 minutes, with 40-minute extended sessions available for complex needs."],
+    ["How long are appointments?","Your initial assessment is 60 minutes. Follow-up visits during the medication optimization phase are 30 minutes each. Maintenance visits are 30 minutes, with 40-minute extended sessions available for complex needs."],
     ["Do I need to be in Washington State?","Yes, you must be physically located in Washington State during your appointments. We serve patients throughout the entire state, from Seattle to Spokane, Bellingham to Vancouver."],
     ["What if I've already been diagnosed with ADHD elsewhere?","If you have an existing ADHD diagnosis and are looking for ongoing medication management, we can discuss a streamlined path that may not require the full assessment program."],
     ["Why choose a solo PA practice over a large telehealth platform?","At Clarity ADHD, you see the same PA every single visit, guaranteed. Combined with transparent flat-fee pricing, no monthly subscriptions, no auto-charges, this is the opposite of the corporate telehealth experience."],
