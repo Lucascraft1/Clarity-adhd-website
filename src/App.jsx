@@ -307,7 +307,7 @@ function Pricing({sRef,bookRef}){
           {/* right col */}
           <div style={{display:"flex",flexDirection:"column",gap:16}}>
             {[
-              {title:"Maintenance Follow-Up",sub:"25-min check-in after stabilization",price:"$175",unit:"per visit",bullets:["Medication management & refills","Symptom monitoring & adjustments","Every 1-3 months as needed"]},
+              {title:"Maintenance Follow-Up",sub:"30-min check-in after stabilization",price:"$175",unit:"per visit",bullets:["Medication management & refills","Symptom monitoring & adjustments","Every 1-3 months as needed"]},
               {title:"Extended Follow-Up",sub:"40-min session for complex needs",price:"$225",unit:"per visit",bullets:["Complex medication adjustments","Co-occurring anxiety or depression","Detailed treatment plan updates"]},
             ].map(c=>(
               <div key={c.title} style={{background:"#fff",border:`2px solid ${S[100]}`,borderRadius:20,padding:24}}>
@@ -492,7 +492,7 @@ function FAQ({sRef}){
     ["What is the QbCheck?","The QbCheck is an FDA-cleared, computer-based test that objectively measures three core ADHD symptoms: attention, impulsivity, and motor activity. It takes about 20 minutes and provides data-driven results that complement our clinical assessment."],
     ["Why do you trial 3 different medications?","ADHD medication response is highly individual. By systematically trying 3 medications, we can compare your response to each and find the one that provides the best symptom control with the fewest side effects."],
     ["I think I have ADHD but I've never been diagnosed. Can you help?","Absolutely. That is exactly what our 5-visit assessment program is designed for. We will conduct a comprehensive evaluation including clinical interview, validated screening tools, and objective testing."],
-    ["How long are appointments?","Your initial assessment is 50 minutes. Follow-up visits during the medication optimization phase are 25 minutes each. Maintenance visits are also 25 minutes, with 40-minute extended sessions available for complex needs."],
+    ["How long are appointments?","Your initial assessment is 50 minutes. Follow-up visits during the medication optimization phase are 25 minutes each. Maintenance visits are 30 minutes, with 40-minute extended sessions available for complex needs."],
     ["Do I need to be in Washington State?","Yes, you must be physically located in Washington State during your appointments. We serve patients throughout the entire state, from Seattle to Spokane, Bellingham to Vancouver."],
     ["What if I've already been diagnosed with ADHD elsewhere?","If you have an existing ADHD diagnosis and are looking for ongoing medication management, we can discuss a streamlined path that may not require the full assessment program."],
     ["Why choose a solo PA practice over a large telehealth platform?","At Clarity ADHD, you see the same PA every single visit, guaranteed. Combined with transparent flat-fee pricing, no monthly subscriptions, no auto-charges, this is the opposite of the corporate telehealth experience."],
