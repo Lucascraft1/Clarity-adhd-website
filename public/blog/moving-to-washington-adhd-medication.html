@@ -51,9 +51,17 @@
   "url": "https://www.clarityadhdwa.com/blog/moving-to-washington-adhd-medication"
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Self-hosted fonts (Fraunces, Nunito; SIL Open Font License) -->
+<link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 600;font-display:swap;src:url(/fonts/fraunces-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 600;font-display:swap;src:url(/fonts/fraunces-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 400;font-display:swap;src:url(/fonts/fraunces-italic-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 400;font-display:swap;src:url(/fonts/fraunces-italic-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:300 700;font-display:swap;src:url(/fonts/nunito-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:300 700;font-display:swap;src:url(/fonts/nunito-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+</style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -79,6 +87,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 4
 .post-body p{font-size:17px;line-height:1.85;color:var(--warm-dark);margin-bottom:24px;}
 .post-body h2{font-family:'Fraunces',serif;font-size:26px;font-weight:400;color:var(--warm-dark);margin:48px 0 16px;line-height:1.3;}
 .post-body h3{font-size:17px;font-weight:700;color:var(--warm-dark);margin:32px 0 12px;}
+.inline-cta{background:var(--sage-bg);border-left:3px solid var(--sage);border-radius:8px;padding:14px 18px;font-size:15px;line-height:1.65;color:var(--warm-dark);margin:0 0 28px;}
+.inline-cta a{color:var(--warm-dark);font-weight:700;text-decoration:underline;text-underline-offset:2px;}
 .cta-box{background:var(--sage-bg);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin:48px 0;}
 .cta-box p{font-size:15px;line-height:1.7;color:var(--warm-dark);margin-bottom:18px;}
 .cta-box > a{display:inline-block;background:var(--warm-dark);color:#ffffff;padding:12px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:background 0.2s;}
@@ -185,6 +195,8 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 
 <p>They usually cannot. Not once you actually live here.</p>
 
+<p class="inline-cta">Just moved and running low? I see new Washington residents by telehealth, and transferring care starts here: <a href="/lost-your-prescriber">Transfer your care</a> or <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener">Book a free consult</a></p>
+
 <h2>What Washington Law Says About Your Old Prescriber</h2>
 
 <p>Washington's Uniform Telehealth Act sets out when a practitioner licensed somewhere else may deliver telehealth to a patient located in Washington. They may do it if they hold a current Washington credential. Failing that, an out-of-state license works only in three narrow circumstances: as a consultation with a Washington practitioner who has the treating relationship and "remains responsible for diagnosing and treating the patient in the state"; as "a specialty assessment, diagnosis, or recommendation for treatment," which the statute explicitly says "does not include the provision of treatment"; or as follow-up by a primary care, mental health, or specialist practitioner "to maintain continuity of care with an established patient who is temporarily located in this state."<sup>1</sup></p>
@@ -227,17 +239,17 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 
 <p>Moving is disruptive enough. This part of it is solvable, and it is much more solvable six weeks out than six days out.</p>
 
+  <div class="cta-box">
+    <p>Clarity ADHD is a telehealth practice focused on adult ADHD care in Washington State offering <a href="/how-it-works">adult ADHD evaluation</a> and <a href="/pricing">medication management</a>, including care for co-occurring depression and anxiety. Now accepting new patients, and you can start with a free 15-minute consultation to see if it is a fit.</p>
+    <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener">Book a Free 15-Minute Consultation</a>
+  </div>
+
 <p style="font-size:13px;color:#7a8a7b;border-top:1px solid #D8E8DE;padding-top:1.25rem;margin-top:2.5rem;"><strong style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">References</strong><br>
 1. RCW 18.134.050, Uniform Telehealth Act, practice requirements for out-of-state practitioners. Revised Code of Washington.<br>
 2. 21 CFR 1306.12, Refilling prescriptions; issuance of multiple prescriptions. United States Code of Federal Regulations.<br>
 3. RCW 69.50.308, Prescriptions. Revised Code of Washington.</p>
 
 <p>Related reading: <a href="/blog/who-can-diagnose-adhd-washington">who can diagnose ADHD in Washington</a>, <a href="/blog/pa-prescribe-adhd-medication-washington">whether a PA can prescribe ADHD medication in Washington</a>, <a href="/blog/adhd-evaluation-cost-washington">what an ADHD evaluation costs in Washington</a>, and <a href="/pricing">pricing</a>.</p>
-
-  <div class="cta-box">
-    <p>Clarity ADHD is a telehealth practice focused on adult ADHD care in Washington State offering <a href="/how-it-works">adult ADHD evaluation</a> and <a href="/pricing">medication management</a>, including care for co-occurring depression and anxiety. Now accepting new patients, and you can start with a free 15-minute consultation to see if it is a fit.</p>
-    <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener">Book a Free 15-Minute Consultation</a>
-  </div>
 
   <div class="author-box">
     <div class="author-avatar" aria-hidden="true">LC</div>
