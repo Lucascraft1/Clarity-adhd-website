@@ -253,16 +253,28 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 <!-- clarity-analytics -->
 <script>
 (function(){
-  function ev(n,p){ if (typeof gtag === "function") gtag("event", n, p || {}); }
+  function ev(n,p){
+    p = p || {};
+    p.transport_type = "beacon";
+    if (typeof gtag === "function") gtag("event", n, p);
+  }
+  function bookClick(a){
+    ev("book_click", {
+      page_path: location.pathname,
+      link_text: (a.textContent || "").trim().slice(0, 60),
+      cta_location: a.className || "inline"
+    });
+  }
+  document.addEventListener("auxclick", function(e){
+    if (e.button !== 1 || !e.target || !e.target.closest) return;
+    var a = e.target.closest('a[href*="clientsecure.me"]');
+    if (a) bookClick(a);
+  }, true);
   document.addEventListener("click", function(e){
     if (!e.target || !e.target.closest) return;
     var a = e.target.closest('a[href*="clientsecure.me"]');
     if (a) {
-      ev("book_click", {
-        page_path: location.pathname,
-        link_text: (a.textContent || "").trim().slice(0, 60),
-        cta_location: a.className || "inline"
-      });
+      bookClick(a);
       return;
     }
     var c = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
