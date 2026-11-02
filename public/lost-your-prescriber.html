@@ -182,7 +182,14 @@ details.faq-item p{font-size:15px;color:var(--warm-mid);line-height:1.7;margin-t
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-L728H1Q5SG');
+  // Internal traffic: visit any page with ?internal=1 once per browser (?internal=0 undoes it)
+  var caInt = {};
+  try { var caQ = new URLSearchParams(location.search).get('internal');
+    if (caQ === '1') localStorage.setItem('ca_internal', '1');
+    if (caQ === '0') localStorage.removeItem('ca_internal');
+    if (localStorage.getItem('ca_internal') === '1') { caInt = { traffic_type: 'internal' }; gtag('set', caInt); }
+  } catch (e) {}
+  gtag('config', 'G-L728H1Q5SG', caInt);
 </script>
 <script type="application/ld+json">
 {

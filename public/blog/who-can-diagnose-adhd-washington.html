@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Who Can Diagnose ADHD in Washington State? | Clarity ADHD</title>
-<meta name="description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<title>Who Can Diagnose ADHD in Washington State? The Short Answer | Clarity ADHD</title>
+<meta name="description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <link rel="canonical" href="https://www.clarityadhdwa.com/blog/who-can-diagnose-adhd-washington">
-<meta property="og:title" content="Who Can Actually Diagnose and Treat ADHD in Washington?">
-<meta property="og:description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<meta property="og:title" content="Who Can Diagnose ADHD in Washington State? The Short Answer">
+<meta property="og:description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <meta property="og:image" content="https://www.clarityadhdwa.com/og/site-cover.png">
 <meta property="og:url" content="https://www.clarityadhdwa.com/blog/who-can-diagnose-adhd-washington">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Who Can Actually Diagnose and Treat ADHD in Washington?">
-<meta name="twitter:description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<meta name="twitter:title" content="Who Can Diagnose ADHD in Washington State? The Short Answer">
+<meta name="twitter:description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <meta name="twitter:image" content="https://www.clarityadhdwa.com/og/site-cover.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Who Can Actually Diagnose and Treat ADHD in Washington?",
-  "description": "Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.",
+  "description": "In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.",
   "image": "https://www.clarityadhdwa.com/og/site-cover.png",
   "datePublished": "2026-09-02",
   "dateModified": "2026-09-17",
@@ -147,7 +147,14 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-L728H1Q5SG');
+  // Internal traffic: visit any page with ?internal=1 once per browser (?internal=0 undoes it)
+  var caInt = {};
+  try { var caQ = new URLSearchParams(location.search).get('internal');
+    if (caQ === '1') localStorage.setItem('ca_internal', '1');
+    if (caQ === '0') localStorage.removeItem('ca_internal');
+    if (localStorage.getItem('ca_internal') === '1') { caInt = { traffic_type: 'internal' }; gtag('set', caInt); }
+  } catch (e) {}
+  gtag('config', 'G-L728H1Q5SG', caInt);
 </script>
 </head>
 <body>
