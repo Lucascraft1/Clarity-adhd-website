@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Who Can Diagnose ADHD in Washington State? | Clarity ADHD</title>
-<meta name="description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<title>Who Can Diagnose ADHD in Washington State? The Short Answer | Clarity ADHD</title>
+<meta name="description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <link rel="canonical" href="https://www.clarityadhdwa.com/blog/who-can-diagnose-adhd-washington">
-<meta property="og:title" content="Who Can Actually Diagnose and Treat ADHD in Washington?">
-<meta property="og:description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<meta property="og:title" content="Who Can Diagnose ADHD in Washington State? The Short Answer">
+<meta property="og:description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <meta property="og:image" content="https://www.clarityadhdwa.com/og/site-cover.png">
 <meta property="og:url" content="https://www.clarityadhdwa.com/blog/who-can-diagnose-adhd-washington">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Who Can Actually Diagnose and Treat ADHD in Washington?">
-<meta name="twitter:description" content="Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.">
+<meta name="twitter:title" content="Who Can Diagnose ADHD in Washington State? The Short Answer">
+<meta name="twitter:description" content="In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.">
 <meta name="twitter:image" content="https://www.clarityadhdwa.com/og/site-cover.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Who Can Actually Diagnose and Treat ADHD in Washington?",
-  "description": "Psychiatrist, psychologist, PA, ARNP, primary care, neuropsychologist. In Washington these are not interchangeable, and the difference that matters is between who can diagnose and who can prescribe.",
+  "description": "In Washington, psychologists can diagnose ADHD but can't prescribe. Psychiatrists, PAs, ARNPs, and primary care can do both. Therapists can't prescribe.",
   "image": "https://www.clarityadhdwa.com/og/site-cover.png",
   "datePublished": "2026-09-02",
-  "dateModified": "2026-09-17",
+  "dateModified": "2026-11-02",
   "author": {
     "@type": "Person",
     "name": "Lucas Craft",
@@ -147,7 +147,14 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-L728H1Q5SG');
+  // Internal traffic: visit any page with ?internal=1 once per browser (?internal=0 undoes it)
+  var caInt = {};
+  try { var caQ = new URLSearchParams(location.search).get('internal');
+    if (caQ === '1') localStorage.setItem('ca_internal', '1');
+    if (caQ === '0') localStorage.removeItem('ca_internal');
+    if (localStorage.getItem('ca_internal') === '1') { caInt = { traffic_type: 'internal' }; gtag('set', caInt); }
+  } catch (e) {}
+  gtag('config', 'G-L728H1Q5SG', caInt);
 </script>
 </head>
 <body>
@@ -186,12 +193,12 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 <div class="post-hero">
   <div class="post-category">Access to Care</div>
   <h1 class="post-title">Who Can Actually Diagnose and Treat ADHD in Washington?</h1>
-  <div class="post-meta">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; Published September 2, 2026 &nbsp;&middot;&nbsp; Washington State</div>
+  <div class="post-meta">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; Published September 2, 2026 &nbsp;&middot;&nbsp; Updated November 2, 2026 &nbsp;&middot;&nbsp; Washington State</div>
 </div>
 <div class="post-body">
 <a href="/blog" class="back-link">&larr; Back to blog</a>
 
-<p><strong>Quick answer:</strong> In Washington, ADHD can be diagnosed by several licensed clinicians, but only some can also prescribe. A physician assistant with an active DEA registration can diagnose and prescribe ADHD medication, including stimulants, under a collaboration agreement. Clarity ADHD is a cash-pay telehealth practice for adults in Washington led by Lucas Craft, MMS, PA-C.</p>
+<p><strong>Quick answer:</strong> In Washington, ADHD can be diagnosed by several licensed clinicians, but only some can also prescribe. A licensed mental health counselor (LMHC), for example, can diagnose ADHD but cannot prescribe. A physician assistant with an active DEA registration can diagnose and prescribe ADHD medication, including stimulants, under a collaboration agreement. Clarity ADHD is a cash-pay telehealth practice for adults in Washington led by Lucas Craft, MMS, PA-C.</p>
 
 <p class="inline-cta">If you're an adult in Washington and want the same clinician to evaluate and treat you, I offer a free 15-minute consult to see if we're a fit. <a href="https://lucas-craft.clientsecure.me" target="_blank" rel="noopener">Book a free consult</a></p>
 
@@ -223,6 +230,16 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 
 <p>They cannot prescribe in Washington. If you are working with a therapist and medication is the question, you need a prescriber alongside them rather than instead of them. Good ADHD care frequently involves both, and the two should be talking to each other.</p>
 
+<h2>Can a Licensed Mental Health Counselor Diagnose ADHD in Washington?</h2>
+
+<p>Yes. Washington law defines mental health counseling as including "the assessment, diagnosis, and treatment of mental and emotional disorders."<sup>5</sup> So an LMHC can diagnose ADHD here. Whether a particular counselor actually does ADHD assessments is a separate question, and it is fair to ask them how they evaluate it.</p>
+
+<p>What an LMHC cannot do is prescribe. The same chapter of law states that it "shall not be construed as permitting the administration or prescription of drugs."<sup>6</sup> A counselor's diagnosis can be a real head start, and if medication is on the table you will still need a prescriber.</p>
+
+<p>If your counselor's credential reads LMHCA, they are a licensed mental health counselor associate. That means they have a graduate degree and are working toward full licensure. Associates must work under an approved supervisor, a fully licensed clinician who has held an unrestricted licence for at least two years, and they must tell you at your first visit that they are an associate under supervision.<sup>7</sup></p>
+
+<p>One more thing worth knowing before you book a prescriber. Federal rules put the responsibility for a controlled substance prescription, which includes stimulants, on the person who writes it.<sup>8</sup> If you already have a diagnosis from a counselor, I'll review it and do my own evaluation before deciding together whether medication makes sense. Bringing the counselor's report to your first visit can save time.</p>
+
 <h2>So Which One Should You Actually Book?</h2>
 
 <p>Work backwards from what you need rather than forwards from the credential.</p>
@@ -250,7 +267,11 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 1. Washington State Department of Health. Who May Prescribe and Administer Prescriptions in Washington State.<br>
 2. WAC 246-918-035, Physician assistant prescribing. Washington Administrative Code.<br>
 3. RCW 18.71A.120, Collaboration agreement, elements, amendment, disciplinary action. Revised Code of Washington.<br>
-4. RCW 18.134.050, Uniform Telehealth Act, practice requirements for out-of-state practitioners. Revised Code of Washington.</p>
+4. RCW 18.134.050, Uniform Telehealth Act, practice requirements for out-of-state practitioners. Revised Code of Washington.<br>
+5. RCW 18.225.010(9), Definitions, "mental health counseling." Revised Code of Washington.<br>
+6. RCW 18.225.160, Limitation of chapter. Revised Code of Washington.<br>
+7. RCW 18.225.010(3) and RCW 18.225.145, Associate licensing, requirements. Revised Code of Washington. WAC 246-809-210, Definitions, "approved supervisor." Washington Administrative Code.<br>
+8. 21 CFR 1306.04(a), Purpose of issue of prescription. Code of Federal Regulations.</p>
 
 <p>Related reading: <a href="/blog/moving-to-washington-adhd-medication">moving to Washington with ADHD medication</a>, <a href="/blog/pa-prescribe-adhd-medication-washington">whether a PA can prescribe ADHD medication in Washington</a>, <a href="/blog/adhd-evaluation-cost-washington">what an ADHD evaluation costs in Washington</a>, and <a href="/pricing">pricing</a>.</p>
 
