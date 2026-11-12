@@ -154,9 +154,9 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
     <a href="/blog">Blog</a>
     <a href="/forms">Patient Forms</a>
     <a href="/contact">Contact</a>
-    <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener" class="nav-cta" style="color:#ffffff !important;">Book Consultation</a>
+    <span class="nav-contact"><a href="sms:+13604537663" class="nav-contact-num">Text 360-453-7663</a><a href="mailto:lucas@clarityadhdwa.com" class="nav-contact-email">lucas@clarityadhdwa.com</a></span>
   </div>
-  <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Book consult</a>
+  <a href="sms:+13604537663" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Text to book</a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu"><span></span></button>
 </nav>
 <script>
@@ -237,7 +237,8 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 
   <div class="cta-box">
     <p>Clarity ADHD is a telehealth practice focused on adult ADHD care in Washington State offering <a href="/how-it-works">adult ADHD evaluation</a> and <a href="/pricing">medication management</a>, including care for co-occurring depression and anxiety. Now accepting new patients, and you can start with a free 15-minute consultation to see if it is a fit.</p>
-    <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener">Book a Free 15-Minute Consultation</a>
+    <p class="consult-cta">Text or email to set up your free 15-minute consult: <a href="sms:+13604537663" class="cta-sms">360-453-7663</a> <span aria-hidden="true">|</span> <a href="mailto:lucas@clarityadhdwa.com" class="cta-email">lucas@clarityadhdwa.com</a></p>
+    <p class="consult-privacy">Please don't include health details in texts or emails; we'll talk about those during the consult.</p>
   </div>
 
   <div class="author-box">
@@ -259,7 +260,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 </div>
 </main>
 
-<div class="footer-info">
+<div class="footer-info" role="region" aria-label="Site information">
   <div class="footer-nav" role="navigation" aria-label="Footer">
     <a href="/">Home</a>
     <a href="/adult-adhd">Adult ADHD</a>
@@ -279,7 +280,7 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
 <footer>
   <div class="footer-logo">Clarity <span>ADHD</span></div>
   <div class="footer-copy">Lucas Craft, MMS, PA-C &nbsp;&middot;&nbsp; <a href="tel:+13604537663" style="color:inherit;text-decoration:none;">(360) 453-7663</a> &nbsp;&middot;&nbsp; <a href="mailto:lucas@clarityadhdwa.com" style="color:inherit;text-decoration:none;">lucas@clarityadhdwa.com</a> &nbsp;&middot;&nbsp; &copy; 2026 Clarity ADHD</div>
-  <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener" style="font-size:14px;color:#ffffff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--sage);padding-bottom:3px;">Book Now</a>
+  <p class="footer-cta">Text or email to set up your free 15-minute consult: <a href="sms:+13604537663" class="cta-sms">360-453-7663</a> <span aria-hidden="true">|</span> <a href="mailto:lucas@clarityadhdwa.com" class="cta-email">lucas@clarityadhdwa.com</a></p>
 </footer>
 
 <!-- clarity-analytics -->
@@ -290,32 +291,17 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
     p.transport_type = "beacon";
     if (typeof gtag === "function") gtag("event", n, p);
   }
-  function bookClick(a){
-    ev("book_click", {
-      page_path: location.pathname,
-      link_text: (a.textContent || "").trim().slice(0, 60),
-      cta_location: a.className || "inline"
-    });
-  }
-  document.addEventListener("auxclick", function(e){
-    if (e.button !== 1 || !e.target || !e.target.closest) return;
-    var a = e.target.closest('a[href*="clientsecure.me"]');
-    if (a) bookClick(a);
-  }, true);
   document.addEventListener("click", function(e){
     if (!e.target || !e.target.closest) return;
-    var a = e.target.closest('a[href*="clientsecure.me"]');
-    if (a) {
-      bookClick(a);
-      return;
-    }
-    var c = e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
-    if (c) {
-      ev("contact_click", {
-        page_path: location.pathname,
-        method: c.getAttribute("href").indexOf("tel:") === 0 ? "phone" : "email"
-      });
-    }
+    var c = e.target.closest('a[href^="sms:"], a[href^="tel:"], a[href^="mailto:"]');
+    if (!c) return;
+    var h = c.getAttribute("href");
+    ev("contact_click", {
+      page_path: location.pathname,
+      method: h.indexOf("sms:") === 0 ? "text" : (h.indexOf("tel:") === 0 ? "phone" : "email"),
+      link_text: (c.textContent || "").trim().slice(0, 60),
+      cta_location: ((c.className || "inline") + (c.parentElement && c.parentElement.className ? " in " + c.parentElement.className : "")).slice(0, 80)
+    });
   }, true);
   if ("IntersectionObserver" in window) {
     var fired = {};

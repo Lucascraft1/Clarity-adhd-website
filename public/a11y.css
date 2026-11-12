@@ -61,3 +61,19 @@ footer.footer-light .footer-logo span{color:var(--sage);}
 .badge-strip span{color:#7f4329;}
 .p-badge{font-size:12px !important;background:var(--terra) !important;color:#ffffff !important;}
 .post-body{overflow-wrap:anywhere;}
+
+/* Text or email consult CTA */
+.cta-sms,.cta-email{color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.nav-contact{display:flex;flex-direction:column;align-items:flex-end;gap:0}
+.nav-links .nav-contact a{display:block;font-size:13px;font-weight:700;line-height:24px;min-height:24px;text-decoration:none}
+.nav-links .nav-contact a.nav-contact-num{color:var(--sage)}
+.nav-links .nav-contact a.nav-contact-email{color:var(--warm-dark)}
+.nav-links .nav-contact a:hover{text-decoration:underline}
+@media (max-width:1180px){.nav-links .nav-contact{align-items:center;gap:14px;margin-top:8px}.nav-links .nav-contact a{font-size:16px}}
+.cta-box p.consult-cta{font-weight:600;margin-bottom:8px}
+.cta-box p.consult-privacy,.consult-privacy{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+.hero-cta{font-size:15px;color:var(--warm-dark)}
+.hero-action:has(.hero-cta){max-width:360px}
+footer .footer-cta{flex-basis:100%;margin:4px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.85)}
+footer.footer-light .footer-cta{color:var(--warm-mid)}
+@media (min-width:1181px) and (max-width:1300px){.nav-links{gap:16px}.nav-links a{white-space:nowrap}}
