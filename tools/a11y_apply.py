@@ -41,7 +41,7 @@ def fix_decls(decls):
 def fix_css(css):
     return re.sub(r'\{([^{}]*)\}', lambda m: '{' + fix_decls(m.group(1)) + '}', css)
 
-MOBILE = '  <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Book consult</a>\n'
+MOBILE = '  <a href="sms:+13604537663" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Text to book</a>\n'
 for f in files:
     s = open(f, encoding='utf-8').read(); o = s
     s = s.replace(OLD, NEW)
