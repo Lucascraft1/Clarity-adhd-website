@@ -288,6 +288,51 @@ footer{background:var(--warm-dark);padding:32px 40px;display:flex;justify-conten
     </video>
     <p class="intro-video-note">A short welcome from Lucas. Press play when you are ready.</p>
   </div>
+  <script>
+  (function(){
+    var video = document.querySelector(".about-intro-video video");
+    if (!video) return;
+    var started = false;
+    var completed = false;
+    var marks = { 25: false, 50: false, 75: false };
+    function send(name, extra){
+      if (typeof gtag !== "function") return;
+      var params = { video_title: "Lucas intro", video_provider: "self-hosted" };
+      if (extra) {
+        for (var key in extra) {
+          if (Object.prototype.hasOwnProperty.call(extra, key)) params[key] = extra[key];
+        }
+      }
+      gtag("event", name, params);
+    }
+    function checkProgress(){
+      var duration = video.duration;
+      if (!duration || !isFinite(duration)) return;
+      var percent = (video.currentTime / duration) * 100;
+      var thresholds = [25, 50, 75];
+      for (var i = 0; i < thresholds.length; i++) {
+        var mark = thresholds[i];
+        if (!marks[mark] && percent >= mark) {
+          marks[mark] = true;
+          send("video_progress", { video_percent: mark });
+        }
+      }
+    }
+    video.addEventListener("play", function(){
+      if (started) return;
+      started = true;
+      send("video_start");
+    });
+    video.addEventListener("timeupdate", checkProgress);
+    video.addEventListener("seeked", checkProgress);
+    video.addEventListener("ended", function(){
+      checkProgress();
+      if (completed) return;
+      completed = true;
+      send("video_complete");
+    });
+  })();
+  </script>
 
   <div class="about-section">
     <div class="section-eyebrow">Why ADHD</div>
