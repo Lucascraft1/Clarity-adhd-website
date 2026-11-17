@@ -6,11 +6,11 @@ Use it on new blog posts before merging. It:
   * replaces online booking links with the text or email consult CTA, and tracks sms/tel/mailto clicks as contact_click
   * raises small font sizes (body 16 to 17px, fine print 14px, uppercase labels 12px)
   * swaps low-contrast text colors for WCAG AA versions
-  * links /a11y.css, adds the skip link, the <main> landmark and the phone Book button
+  * links /a11y.css, adds the skip link, the <main> landmark and the phone "Text to book" button
   * on blog posts, adds "On this page" jump links built from the h2 headings
 Write any Short answer box by hand; this script never writes summaries.
 """
-import re, glob, sys, os
+import re, glob, sys, os, html
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 files = sys.argv[1:] or (['index.html'] + sorted(glob.glob('public/*.html')) + sorted(glob.glob('public/blog/*.html')))
 files = [f for f in files if 'googlebc' not in f]
@@ -41,7 +41,7 @@ def fix_decls(decls):
 def fix_css(css):
     return re.sub(r'\{([^{}]*)\}', lambda m: '{' + fix_decls(m.group(1)) + '}', css)
 
-MOBILE = '  <a href="https://lucas-craft.clientsecure.me/request/service" target="_blank" rel="noopener" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Book consult</a>\n'
+MOBILE = '  <a href="sms:+13604537663" class="nav-cta nav-cta-mobile" style="color:#ffffff !important;">Text to book</a>\n'
 for f in files:
     s = open(f, encoding='utf-8').read(); o = s
     s = s.replace(OLD, NEW)
